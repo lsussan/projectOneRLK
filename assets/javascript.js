@@ -26,10 +26,10 @@ $(".btn").on("click", function() {
 
   //WEATHER=======================================================================================
 
-    var APIKey = "9b3663446b3b5048fe340fdc2f081a01";
+    var APIKey = "80861facc816d520491d88f2f2b33fca";
 
-    var queryWeatherURL1 = "https://api.openweathermap.org/data/2.5/forecast?q=" + location1 + '&appid=' + APIKey;
-    var queryWeatherURL2 = "https://api.openweathermap.org/data/2.5/forecast?q=" + location2 + '&appid=' + APIKey;
+    var queryWeatherURL1 = "http://api.openweathermap.org/data/2.5/forecast?q=" + location1 + '&appid=' + APIKey;
+    var queryWeatherURL2 = "http://api.openweathermap.org/data/2.5/forecast?q=" + location2 + '&appid=' + APIKey;
 
 
     $.ajax({
@@ -83,8 +83,8 @@ $(".btn").on("click", function() {
 
   //NEWS=============================================================================================
 
-    var queryAboutURL1 = "https://api.geonames.org/wikipediaSearchJSON?q=" + location1 + "&username=lsussan";
-    var queryAboutURL2 = "https://api.geonames.org/wikipediaSearchJSON?q=" + location2 + "&username=lsussan";
+    var queryAboutURL1 = "http://api.geonames.org/wikipediaSearchJSON?q=" + location1 + "&username=lsussan";
+    var queryAboutURL2 = "http://api.geonames.org/wikipediaSearchJSON?q=" + location2 + "&username=lsussan";
 
 
     $.ajax({
@@ -98,7 +98,7 @@ $(".btn").on("click", function() {
         console.log(queryAboutURL1);
         console.log(response);
 
-        $('#about1').html('<h3>' + location1 + '</h3>' + '<br><p> Summary: ' + response.geonames[0].summary + '<br><br> Go to: ' + "<a href='https://" + response.geonames[0].wikipediaUrl +  "'target='blank1'> Wikipedia</a>" + '</p>');
+        $('#about1').html('<h3>' + location1 + '</h3>' + '<br><p> Summary: ' + response.geonames[0].summary + '<br><br> Go to: ' + "<a href='http://" + response.geonames[0].wikipediaUrl +  "'target='blank1'> Wikipedia</a>" + '</p>');
       });
 
 
@@ -113,7 +113,7 @@ $(".btn").on("click", function() {
         console.log(queryAboutURL2);
         console.log(response);
 
-        $('#about2').html('<h3>' + location2 + '</h3>' + '<br><p> Summary: ' + response.geonames[0].summary + '<br><br> Go to: ' + "<a href='https://" + response.geonames[0].wikipediaUrl +  "'target='blank2'> Wikipedia</a>" + '</p>');
+        $('#about2').html('<h3>' + location2 + '</h3>' + '<br><p> Summary: ' + response.geonames[0].summary + '<br><br> Go to: ' + "<a href='http://" + response.geonames[0].wikipediaUrl +  "'target='blank2'> Wikipedia</a>" + '</p>');
 
       });
 
