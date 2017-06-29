@@ -26,10 +26,10 @@ $(".btn").on("click", function() {
 
   //WEATHER=======================================================================================
 
-    var APIKey = "80861facc816d520491d88f2f2b33fca";
+    var APIKey = "9b3663446b3b5048fe340fdc2f081a01";
 
-    var queryWeatherURL1 = "http://api.openweathermap.org/data/2.5/forecast?q=" + location1 + '&appid=' + APIKey;
-    var queryWeatherURL2 = "http://api.openweathermap.org/data/2.5/forecast?q=" + location2 + '&appid=' + APIKey;
+    var queryWeatherURL1 = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=" + location1 + '&appid=' + APIKey;
+    var queryWeatherURL2 = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=" + location2 + '&appid=' + APIKey;
 
 
     $.ajax({
@@ -83,8 +83,8 @@ $(".btn").on("click", function() {
 
   //NEWS=============================================================================================
 
-    var queryAboutURL1 = "http://api.geonames.org/wikipediaSearchJSON?q=" + location1 + "&username=lsussan";
-    var queryAboutURL2 = "http://api.geonames.org/wikipediaSearchJSON?q=" + location2 + "&username=lsussan";
+    var queryAboutURL1 = "https://cors-anywhere.herokuapp.com/http://api.geonames.org/wikipediaSearchJSON?q=" + location1 + "&username=lsussan";
+    var queryAboutURL2 = "https://cors-anywhere.herokuapp.com/http://api.geonames.org/wikipediaSearchJSON?q=" + location2 + "&username=lsussan";
 
 
     $.ajax({
